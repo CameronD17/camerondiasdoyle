@@ -1,10 +1,9 @@
 ---
 title: Contact
-subtitle: Journal comes with a built-in contact form, that's free and easy to set up.
-description: A stunning personal blog Jekyll theme with an image-focused design.
+description: A Formspree form to get in contact with me 
 featured_image: /images/demo/demo-portrait.jpg
 ---
 
-{% include contact-form.html %}
+The easiest way to get in contact with me is via email at [cameron\[at\]diasdoyle.com](mailto:cameron@diasdoyle.com), or alternatively, please fill in the form below and I'll get back to you as soon as I can.
 
-We've made a contact form that you can use with [Formspree](https://formspree.io/create/jekyllthemes) to handle up to 50 submissions per month for free. You could also easily switch out the end-point to use another contact form service.
+{% include contact-form.html %}
