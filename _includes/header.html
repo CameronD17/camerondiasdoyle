@@ -12,13 +12,15 @@
 			<img src="{{ site.data.settings.header_settings.logo_image | relative_url }}" class="header__logo__img">
 		</a>
 		{% else %}
-		<a href="{{ site.baseurl }}/" class="header__title">
-			{{ site.data.settings.basic_settings.site_title }}
+		<a href="{{ site.baseurl }}/">
+			<p class="header__title">{{ site.data.settings.author.firstname }}</p>
+			<p class="header__title">{{ site.data.settings.author.surname }}</p>
 		</a>
 		{% endif %}
 
-		<p class="header__tagline">{{ site.data.settings.basic_settings.site_tagline }}</p>
-
+		<div class="header__tagline">
+			<p>Hi, I'm {{ site.data.settings.author.firstname }}, and I'm a software engineer living in {{ site.data.settings.author.location }}. </p>
+		</div>
 		<div class="menu">
 			<div class="menu__toggle js-menu-toggle">
 				<div class="menu__toggle__icon"><span></span></div>
