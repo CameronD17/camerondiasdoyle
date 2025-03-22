@@ -1,55 +1,30 @@
 ---
 layout: default
-title: A stunning personal blog Jekyll theme
-description: Journal is a stunning personal blog Jekyll theme with an image-focused design.
-featured_image: /images/demo/demo-landscape.jpg
+title: Software Engineer
+featured_image: /images/profile.jpeg
 ---
 
 <section class="blog single">
 
 	<div class="wrap">
 
-		{% for post in paginator.posts %}
+		<h1>Who I Am</h1>
 
-		<article class="blog-post">
+		<p>I currently live in {{ site.data.settings.author.location }} with my wife, Júlia, our dog <a href="https://www.instagram.com/charlie.border.collie/">Charlie</a>, and our two cats, Tommy and Tegan.</p>
+		<p>I spend most of my free time running (sometimes with my wife, sometimes with Charlie, and sometimes with both), and I'm also currently learning to speak Portuguese.</p>
+		<p>Alongside this, I also have a keen interest in behavioural economics, third-wave coffee culture, and (when I can find the time) being a terrible facsimile of a Dungeon Master.</p>
+		
+		<hr>
 
-			<div class="blog-post__header">
-				<h2 class="blog-post__title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
-				<p class="blog-post__subtitle">{{ post.date | date_to_long_string }}</p>
-			</div>
+		<h1>What I Am Doing</h1>
 
-			{% if post.featured_image %}
-			<a href="{{ post.url | relative_url }}" class="blog-post__image" style="background-image: url({{ post.featured_image | relative_url }});"></a>
-			{% endif %}
+		<p>For a more up-to-date and/or in-depth description of what I am up to, check out my <a href="{{ site.baseurl }}/now">now page</a>.</p>
 
-			<div class="blog-post__content">
-				<p>{{ post.excerpt }}</p>
-				<p><a href="{{ post.url | relative_url }}" class="button">Read More</a>
-			</div>
+		<hr>
 
-		</article>
+		<h1>Professional Experience</h1>
 
-		{% endfor %}
-
+		<p>If you just want my CV, you can <a href="{{ site.baseurl }}/CV.pdf" target="_blank" class="js-no-ajax">get a copy here</a>, or I have more details of my work history on <a href="{{ site.baseurl }}/experience">my experience page</a>.</p>
 	</div>
 
 </section>
-
-{% if paginator.total_pages > 1 %}
-
-<section class="pagination">
-
-	{% if paginator.previous_page %}
-	<div class="pagination__prev">
-		<a href="{{ paginator.previous_page_path | relative_url }}" class="button button--large"><i class="fa fa-angle-left" aria-hidden="true"></i> <span>Newer Posts</span></a>
-	</div>
-	{% endif %}
-	{% if paginator.next_page %}
-	<div class="pagination__next">
-		<a href="{{ paginator.next_page_path | relative_url }}" class="button button--large"><span>Older Posts</span> <i class="fa fa-angle-right" aria-hidden="true"></i></a>
-	</div>
-	{% endif %}
-
-</section>
-
-{% endif %}

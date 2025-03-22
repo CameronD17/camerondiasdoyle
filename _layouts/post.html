@@ -2,12 +2,13 @@
 layout: default
 ---
 
+{% assign wordcount = page.content | number_of_words %}
 <section class="intro">
 
 	<div class="wrap">
 
 		<h1>{{ page.title }}</h1>
-		<p>{{ page.date | date_to_long_string }}</p>
+		<p>{{ page.date | date_to_long_string }} - {{ wordcount | divided_by: 200 | plus: 1 }} min read</p>	
 
 	</div>
 
