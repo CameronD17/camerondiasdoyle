@@ -1,0 +1,43 @@
+---
+layout: default
+---
+
+<section class="intro">
+
+	<div class="wrap">
+
+		<h1>{{ page.date | date_to_string }}</h1>
+		<p>{{ page.subtitle }}</p>
+
+	</div>
+
+</section>
+
+<section class="single">
+
+	<div class="wrap">
+
+		{{ page.content }}
+
+	</div>
+
+</section>
+
+<section class="pagination">
+
+	{% if page.previous.url %}
+	<div class="pagination__prev">
+
+		<a href="{{ page.previous.url }}" class="button button--large"><i class="fa fa-angle-left" aria-hidden="true"></i> <span>{{ page.previous.date | date_to_string }}</span></a>
+	
+	</div>
+	{% endif %}
+	{% if page.next.url %}
+	<div class="pagination__next">
+		
+		<a href="{{ page.next.url }}" class="button button--large"><span>{{ page.next.date | date_to_string }}</span> <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+	
+	</div>
+	{% endif %}
+
+</section>

@@ -1,6 +1,6 @@
-site: Journal Jekyll Theme
+site: Cameron Dias-Doyle
 
-url: 
+url: https://cameron.diasdoyle.com
 baseurl: 
 
 collections:
@@ -10,9 +10,9 @@ collections:
   posts:
     output: true
     permalink: /blog/:slug
-  projects:
+  now:
     output: true
-    permalink: /project/:slug
+    permalink: /now/:slug
 
 defaults:
   -
@@ -35,9 +35,9 @@ defaults:
   -
     scope:
       path: ""
-      type: "projects"
+      type: "now"
     values:
-      layout: "project"
+      layout: "now"
 
 markdown: kramdown
 
@@ -54,4 +54,6 @@ plugins:
 
 paginate: 6
 paginate_path: "/blog/page:num/"
+
+excerpt_separator: "<!-- Read More -->"
   
